@@ -3,7 +3,7 @@
 </script>
 
 <template>
-<div class="bg-green-600 h-screen">
+<div class="bg-tertiary h-screen">
   Left sidebar
 </div>
 </template>

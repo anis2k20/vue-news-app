@@ -4,9 +4,9 @@
 
 <template>
 <div>
-  <nav class="bg-yellow-200 p-3">
+  <nav class="bg-primary text-quaternary p-3 font-newsreader">
     <ul class="flex gap-5 justify-center">
-      <li>Item</li>
+      <li><router-link to="/about">About</router-link></li>
       <li>Item</li>
       <li>Item</li>
       <li>Item</li>

@@ -3,8 +3,8 @@
 </script>
 
 <template>
-<div class="bg-tertiary h-screen">
-  Left sidebar
+<div>
+  About page
 </div>
 </template>
 
