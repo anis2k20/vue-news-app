@@ -3,12 +3,23 @@ import axios from "axios";
 
 export const useNewsStore = defineStore("news", {
     state: () => ({
-        news: []
+        news: [],
+        topNews: [],
     }),
     actions: {
         async getNews() {
-            const response = await axios.get('https://newsdata.io/api/1/latest?apikey=pub_4830916a932b6cc1b9ecbf6256a8b8a976d00');
-            this.news = response.data.results;
+            const response = await axios.get('https://newsapi.org/v2/top-headlines?country=us&apiKey=db4231876d5543429da41d349c53ca03');
+            this.news = response.data.articles;
+            this.topNews = response.data.articles.slice(0, 6);
+        },
+        async getNewsByCategory(category) {
+            const response = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=db4231876d5543429da41d349c53ca03`);
+            this.news = response.data.articles;
+        },
+        async searchNews(query) {
+            this.news.splice(0);
+            const response = await axios.get(`https://newsapi.org/v2/everything?q=${query}&apiKey=db4231876d5543429da41d349c53ca03`);
+            this.news = response.data.articles.slice(0, 10);
         }
     }
 })

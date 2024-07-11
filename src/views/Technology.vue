@@ -1,4 +1,3 @@
-
 <template>
   <Card :news="news"/>
 </template>
@@ -10,6 +9,6 @@ import Card from "../components/Card.vue";
 const news = computed(() => useNewsStore().news);
 onMounted(() => {
   const newsStore = useNewsStore();
-  newsStore.getNewsByCategory('business');
+  newsStore.getNewsByCategory('technology');
 })
 </script>

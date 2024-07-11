@@ -2,9 +2,10 @@ import {createRouter, createWebHistory} from "vue-router";
 import Home from "../views/Home.vue";
 import Business from "../views/Business.vue";
 import Entertainment from "../views/Entertainment.vue";
-import Lifestyle from "../views/Lifestyle.vue";
 import Sports from "../views/Sports.vue";
-import Youth from "../views/Youth.vue"
+import Health from "../views/Health.vue";
+import Technology from "../views/Technology.vue";
+import SearchResult from "../views/SearchResult.vue";
 
 export default createRouter({
     history: createWebHistory(),
@@ -23,16 +24,20 @@ export default createRouter({
             component: Entertainment,
         },
         {
-            path: "/lifestyle",
-            component: Lifestyle,
+            path: "/health",
+            component: Health,
         },
         {
             path: "/sports",
             component: Sports,
         },
         {
-            path: "/youth",
-            component: Youth,
+            path: "/search-result",
+            component: SearchResult,
+        },
+        {
+            path: "/technology",
+            component: Technology,
         },
     ]
 })
